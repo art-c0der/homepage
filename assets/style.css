@@ -1,0 +1,71 @@
+:root {
+  --blue: #098ff6;
+  --dark-blue: #007fad;
+  --light-blue: #6FC2F3;
+  --grey: #9eacb5;
+  --dark-grey: #767F83;
+  --light-grey: #dee1e2;
+  --black: #343434;
+}
+
+main {
+  border: 20px solid var(--light-grey);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.avatar-wrapper {
+  border-radius: 50%;
+  overflow: hidden;
+  border: 7px solid var(--light-grey);
+  padding: 0;
+  transition: border-color 200ms;
+}
+
+.avatar-wrapper:hover {
+  border-color: var(--grey);
+}
+
+.avatar-wrapper img {
+  filter: grayscale(1);
+  transition: ease-in-out 200ms;
+}
+
+.avatar-wrapper img:hover {
+  filter: grayscale(0);
+}
+
+.labels-list {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.labels-list li {
+  display: block;
+  color: black;
+  background-color: var(--light-grey);
+  border: 1px solid var(--grey);
+  border-radius: 2px;
+  padding: 3px;
+  margin: 2px;
+  cursor: default;
+  transition: ease-in-out 200ms;
+}
+
+.labels-list li:hover {
+  background-color: var(--grey);
+}
+
+.labels-list li::before {
+  content: none;
+}
+
+.labels-list.labels-list--skills li {
+  color: #ffffff;
+  background-color: var(--light-blue);
+  border-color: var(--dark-blue);
+}
+
+.labels-list.labels-list--skills li:hover {
+  background-color: var(--dark-blue);
+}
